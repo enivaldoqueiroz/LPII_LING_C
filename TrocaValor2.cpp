@@ -4,12 +4,11 @@
 
 void dividir(float* a , float* b)
 {
-	int a1;
-	a1 = *a;
+	float soma = *a + *b;
+		
+	*a = *a / soma;
 	
-	*a = *a / (*a + *b);
-	
-	*b = *b / (a1 + *b);
+	*b = *b / soma;
 }
 
 void troca(float* a, float* b)
@@ -33,6 +32,8 @@ int main()
 	dividir(&a , &b);
 	
 	printf("a = %f e b = %f \n",a , b);
+	
+	printf("Os valores de a e b com percentual %f e %f ", a*100 , b*100);
 	
 	
 }
