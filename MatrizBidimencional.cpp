@@ -49,11 +49,11 @@ int main ()
 	printf("\n");
 		
 	//3)Somatorio da 2º linha
-	for (t=0; t<3; t++)
+	for (t=0; t<4; t++)
 	{
-		for(i=0; i<2; i++)
+		for(i=0; i<4; i++)
 		{
-			if (t==2)
+			if (t==1)
 			{
 				soma2linha = soma2linha + mat [t][i];
 			}
