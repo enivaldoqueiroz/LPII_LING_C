@@ -13,6 +13,8 @@ int main ()
 	int soma = 0;
 	int soma2linha = 0;
 	int soma2coluna = 0;
+	int soma1diagonal = 0;
+	int soma2diagonal = 0;
 		
 	//1)Preenche a matriz
 	for (t=0; t<4; t++)
@@ -61,7 +63,8 @@ int main ()
 		}
 	}
 	//Visualiza a soma da 2º linha
-	printf("Somatorio da 2 linha: %d\n", soma2linha , "\n");
+	printf("Somatorio da linha 1: %d\n", soma2linha , "\n");
+	printf("\n");
 	printf("\n");
 	
 	//4)Somatorio da 2º Coluna
@@ -77,7 +80,43 @@ int main ()
 	}
 	
 	//Visualiza a soma da 2º Coluna
-	printf("Somatorio da 2 Coluna: %d", soma2coluna , "\n");
+	printf("Somatorio da Coluna 2: %d", soma2coluna , "\n");
+	printf("\n");
+	printf("\n");
+	
+	
+	//5)Somatorio da Diagonal Principal	
+	for (t=0; t<4; t++)
+	{
+		for(i=0; i<4; i++)
+		{
+			if ( t==0 && i==0 || t==1 && i==1 || t==2 && i==2 || t==3 && i==3 )
+			{
+				soma1diagonal = soma1diagonal + mat [t][i];
+			}
+		}
+	}
+	
+	//Visualiza da Diagonal Principal	
+	printf("Somatorio da Diagonal 1: %d", soma1diagonal , "\n");
+	printf("\n");
+	printf("\n");
+	
+	//6)Somatorio da Diagonal Secundaria	
+	for (t=0; t<4; t++)
+	{
+		for(i=0; i<4; i++)
+		{
+			if ( t==0 && i==3 || t==1 && i==2 || t==2 && i==1 || t==3 && i==0 )
+			{
+				soma2diagonal = soma2diagonal + mat [t][i];
+			}
+		}
+	}
+	
+	//Visualiza da Diagonal Secundaria	
+	printf("Somatorio da Diagonal 2: %d", soma2diagonal , "\n");
+	printf("\n");
 	printf("\n");
 }
 
