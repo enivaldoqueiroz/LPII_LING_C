@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>>
 //Vetores
 //1)Preencher a matriz
 //2)Somar todos os valores da matriz
@@ -118,6 +119,8 @@ int main ()
 	printf("Somatorio da Diagonal 2: %d", soma2diagonal , "\n");
 	printf("\n");
 	printf("\n");
+	
+	system ( "pause" );
 }
 
 
