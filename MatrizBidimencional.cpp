@@ -12,6 +12,7 @@ int main ()
 	int t, i, mat[4][4];
 	int soma = 0;
 	int soma2linha = 0;
+	int soma2coluna = 0;
 		
 	//1)Preenche a matriz
 	for (t=0; t<4; t++)
@@ -44,7 +45,7 @@ int main ()
 	}
 	
 	//Visualiza a soma
-	printf("%d", soma , "\n");
+	printf("Somatorio de Todos os valores da matriz: %d", soma , "\n");
 	printf("\n");
 	printf("\n");
 		
@@ -60,8 +61,24 @@ int main ()
 		}
 	}
 	//Visualiza a soma da 2º linha
-	printf("%d", soma2linha , "\n");
+	printf("Somatorio da 2 linha: %d\n", soma2linha , "\n");
+	printf("\n");
 	
+	//4)Somatorio da 2º Coluna
+	for (t=0; t<4; t++)
+	{
+		for(i=0; i<4; i++)
+		{
+			if (i==1)
+			{
+				soma2coluna = soma2coluna + mat [t][i];
+			}
+		}
+	}
+	
+	//Visualiza a soma da 2º Coluna
+	printf("Somatorio da 2 Coluna: %d", soma2coluna , "\n");
+	printf("\n");
 }
 
 
