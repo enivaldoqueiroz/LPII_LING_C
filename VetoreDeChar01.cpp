@@ -5,7 +5,7 @@
 //1)Contar a quantidade do caracter c;
 //2)Ler um texto e contar quantos caracteres o texto possui, ou seja, qual o seu tamanho?;
 //3)Ler um texto e trocar todas as letras 'Q' por 'A';
-//4)ler um texto e rtocar todas as letras minusculas por maiuscula e vice-versa.
+//4)ler um texto e trocar todas as letras minusculas por maiuscula e vice-versa.
 
 
 */
@@ -44,5 +44,20 @@ int main()
 		}
 	}
 	printf("O troca de caracteres: %s", texto);
+	printf("\n");
+	
+	//4)ler um texto e trocar todas as letras minusculas por maiuscula e vice-versa.
+	for (i = 0; texto[i] != '\0'; i++)
+	{
+		if(texto[i]>= 'A' && texto[i]<='Z')
+		{
+			texto[i] = texto[i] + 32;
+		} 
+		else if(texto[i]>= 'a' && texto[i]<='z')
+		{
+			texto[i] = texto[i] - 32;
+		}
+	}
+	printf("O troca de todas as letras minusculas por maiuscula e vice-versa : %s", texto);
 	printf("\n");
 }
