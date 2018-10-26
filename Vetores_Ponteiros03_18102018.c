@@ -31,12 +31,12 @@ void main()
 	printf("Digite o Paravra : ");
 	gets(char0);
 	printf("\n");
-	printf("Digite o 1 Caractere : ");
+	printf("Digi
+	printf("\n");te o 1 Caractere : ");
 	scanf("%c", &char1);
 	printf("\n");
 	printf("Digite o 2 Caractere: ");
 	scanf("%c", &char2);
-	printf("\n");
 	
 	
 	int tam = strlen(char0);
