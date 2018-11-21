@@ -67,9 +67,24 @@ void le_produtos_arq(FILE* f, produto* lista, int tam)
 	}
 }
 
-void maior_produto()
+char* maior_produto(produto* lista, int tam)
 {
+	int i;
+	float mais_caro = lista->preco;
+	char* nome_mais_caro = malloc (50 * sizeof(char));
+	strcpy(nome_mais_caro, lista->nome);
 	
+	for(i = 0; i < tam; i++)
+	{
+		if(lista->preco > mais_caro)
+		{
+			mais_caro = lista->preco;
+			strcpy(nome_mais_caro, lista->nome);
+		}
+		lista++;
+	}
+	
+	return nome_mais_caro;
 }
 
 int main()
@@ -82,6 +97,8 @@ int main()
 	//grava_produtos(f, lista, 3);
 	le_produtos_arq(f, lista, 3);
 	imprime_produtos(lista, 3);
-	maior_produto();
+	printf("\n");
+	printf(maior_produto(lista, 3));
+	
 	fclose(f);
 }
