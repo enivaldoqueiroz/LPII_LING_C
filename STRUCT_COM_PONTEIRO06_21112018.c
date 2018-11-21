@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 struct produto {
 	int codigo;
 	char nome[50];
@@ -10,7 +11,7 @@ typedef struct produto produto;
 void le_produtos(produto* lista, int tam)
 {
 	int i;
-	for(i = 0; i < tam; i++)
+	for(i = 0; i <= tam; i++)
 	{
 		printf("Digite o codigo: ");
 		scanf("%d", &lista->codigo);
@@ -51,7 +52,22 @@ void grava_produtos(FILE* f, produto* lista, int tam)
 	}
 }
 
-void le_produtos_arq(FILE* f, int tam)
+void le_produtos_arq(FILE* f, produto* lista, int tam)
+{
+	int i;
+	//produto* lista = malloc(3 * sizeof(produto));
+	
+	for(i = 0; i < tam; i++ )
+	{
+		fscanf(f, "%d", &lista->codigo);
+		fscanf(f, "%s", &lista->nome);
+		fscanf(f, "%f", &lista->preco);
+		//printf("%d\n", lista->codigo);
+		lista++;
+	}
+}
+
+void maior_produto()
 {
 	
 }
@@ -59,9 +75,13 @@ void le_produtos_arq(FILE* f, int tam)
 int main()
 {
 	produto* lista = malloc(3 * sizeof(produto));
-	FILE* f = fopen("C:\\Users\\rwagner\\Desktop\\teste.txt", "w");
-	le_produtos(lista, 3);
+	//FILE* f = fopen("produto.txt", "w");
+	FILE* f = fopen("produto.txt", "r");
+	//le_produtos(lista, 3);
+	//imprime_produtos(lista, 3);
+	//grava_produtos(f, lista, 3);
+	le_produtos_arq(f, lista, 3);
 	imprime_produtos(lista, 3);
-	grava_produtos(f, lista, 3);
+	maior_produto();
 	fclose(f);
 }
