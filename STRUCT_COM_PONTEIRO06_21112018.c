@@ -87,6 +87,9 @@ char* maior_produto(produto* lista, int tam)
 	return nome_mais_caro;
 }
 
+//Criar uma função para indentificar o produto mais barato
+//Criar uma função para descubrir o preco medio dos produtos
+
 int main()
 {
 	produto* lista = malloc(3 * sizeof(produto));
