@@ -8,6 +8,7 @@ struct produto {
 
 typedef struct produto produto;
 
+//Função que le as entradas dos produtos
 void le_produtos(produto* lista, int tam)
 {
 	int i;
@@ -25,6 +26,7 @@ void le_produtos(produto* lista, int tam)
 	}
 }
 
+//Função que imprime os produtos cadastrados no arquivo produtos
 void imprime_produtos(produto* lista, int tam)
 {
 	int i;
@@ -37,6 +39,7 @@ void imprime_produtos(produto* lista, int tam)
 	}
 }
 
+//Função que grava as estradas dentro do arquivo produtos
 void grava_produtos(FILE* f, produto* lista, int tam)
 {
 	int i;
@@ -52,6 +55,7 @@ void grava_produtos(FILE* f, produto* lista, int tam)
 	}
 }
 
+//Função que le os dados dentro do arquivo produtos
 void le_produtos_arq(FILE* f, produto* lista, int tam)
 {
 	int i;
@@ -67,6 +71,7 @@ void le_produtos_arq(FILE* f, produto* lista, int tam)
 	}
 }
 
+//Função que calcula a media dos produtos existentes
 char* maior_produto(produto* lista, int tam)
 {
 	int i;
@@ -88,6 +93,11 @@ char* maior_produto(produto* lista, int tam)
 }
 
 //Criar uma função para indentificar o produto mais barato
+
+/*Criar uma função para calcular quantos produtos custam mais do que limete
+  onde limite é uma variavel também passada como argumento para a função
+*/
+
 //Criar uma função para descubrir o preco medio dos produtos
 float preco_medio(produto* lista, int tam)
 {
