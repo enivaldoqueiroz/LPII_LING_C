@@ -89,6 +89,19 @@ char* maior_produto(produto* lista, int tam)
 
 //Criar uma função para indentificar o produto mais barato
 //Criar uma função para descubrir o preco medio dos produtos
+float preco_medio(produto* lista, int tam)
+{
+	int i,cont;
+	float media,soma = 0;
+	for(i = 0; i < tam; i++)
+	{
+		soma = lista->preco + soma;
+		lista++;
+	}
+	
+	media = soma/tam;
+	return media;
+}
 
 int main()
 {
@@ -102,6 +115,8 @@ int main()
 	imprime_produtos(lista, 3);
 	printf("\n");
 	printf(maior_produto(lista, 3));
+	printf("\n");
+	printf("\n%f",preco_medio(lista,3));
 	
 	fclose(f);
 }
